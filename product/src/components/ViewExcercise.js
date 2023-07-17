@@ -39,17 +39,17 @@ const ViewExcercise = (props) => {
         
         
           <div style={{margin: '50px'}} className = "form-group">
-            <label htmlFor="excerciseTitle" >Excercise Title:</label>
-            <p>{allExcercises.title}</p>
+            
+            <h1>{allExcercises.title}</h1>
           </div>
           <div style={{margin: '50px'}} className = "form-group">
-            <label htmlFor="excerciseReps">Amount of Reps:</label>
-            <p>{allExcercises.reps}</p>
+            
+            <h1>{allExcercises.reps} Reps</h1>
           </div>
               
             <div style={{margin: '50px'}} className = "form-group">
-              <label htmlFor="excerciseSets">Amount of Sets:</label>
-              <p>{allExcercises.sets}</p>
+              
+              <h1>{allExcercises.sets} Sets</h1>
             </div>
               
         
