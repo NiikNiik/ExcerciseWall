@@ -7,7 +7,7 @@ const DisplayAll = (props) => {
   const [allExcercises, setAllExcercises] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/excercise")
+      .get("https://localhost:8000/api/excercise")
       .then((response) => {
         console.log(response.data);
         setAllExcercises(response.data);

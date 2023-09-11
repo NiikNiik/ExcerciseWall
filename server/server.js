@@ -12,4 +12,3 @@ require('./routes/excercise.routes')(app);   // We're importing the routes expor
 app.listen(8000, () => {
     console.log("Listening at Port 8000")
 })
-

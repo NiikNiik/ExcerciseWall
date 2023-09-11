@@ -25,6 +25,7 @@ const EditExcercise = (props) => {
       .catch((err) => {
         console.log(err.response);
         setExcerciseNotFoundError(`Excercise not found using that ID`);
+        
       });
   }, []);
 
@@ -65,6 +66,7 @@ const EditExcercise = (props) => {
           defaultValue={excerciseTitle}
           onChange={(e) => setExcerciseTitle(e.target.value)}
         />
+        {errors?.title && <span>{errors.title.message}</span> }
         </div>
         <div className = "form-group"  style={{margin: '50px'}}>
         <label htmlFor="excerciseReps">Amount of Reps</label>
@@ -76,7 +78,7 @@ const EditExcercise = (props) => {
           type = "text"
           defaultValue={excerciseReps}
         />
-        
+        {errors?.reps && <span>{errors.reps.message}</span> }
         </div>
         <div className = "form-group" style={{margin: '50px'}} >
         <label htmlFor="excerciseSets">Amount of Sets</label>
@@ -88,6 +90,7 @@ const EditExcercise = (props) => {
           defaultValue={excerciseSets}
           onChange={(e) => setExcerciseSets(e.target.value)}>
         </input>
+        {errors?.sets && <span>{errors.sets.message}</span> }
         </div>
         
         {errors.excercise ? <p>{errors.excercise.message}</p> : null}
