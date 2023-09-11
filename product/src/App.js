@@ -17,8 +17,8 @@ function App() {
       token: 'ipworld.info'
     },
     headers: {
-      'X-RapidAPI-Key': '64d092dd88mshc0a6c9bdcffa707p1ba1fajsn32dae7844a0c',
-      'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
+      'X-RapidAPI-Key': process.env.API_KEY,
+      'X-RapidAPI-Host': process.env.API_DOMAIN
     }
   };
 
